@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
+        }
+    }
+    defaultConfig{
+        ndk {
+//            abiFilter 'armeabi-v7a'
+        }
+    }
+}
