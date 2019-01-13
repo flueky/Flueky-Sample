@@ -3,7 +3,7 @@
 
 #include <android/log.h>
 
-#define LOG_TAG "ZKF-JNI"
+#define LOG_TAG "FLUEKY-JNI"
 #define ENABLE_LOG_PRINT
 
 #ifdef ENABLE_LOG_PRINT

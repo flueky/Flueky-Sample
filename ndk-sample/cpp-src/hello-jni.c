@@ -3,11 +3,10 @@
 #include "com_flueky_demo_MainActivity.h"
 #include "util/log.h"
 
-/* This is a trivial JNI example where we use a native method
- * to return a new VM String. See the corresponding Java source
- * file located at:
+/**
+ * JNI 示例，演示native方法返回一个字符串，Java 源码见
  *
- *   hello-jni/app/src/main/java/com/example/hellojni/HelloJni.java
+ * ndk-sample/app/src/main/java/com/flueky/demo/MainActivity.java
  */
 JNIEXPORT jstring JNICALL
 Java_com_flueky_demo_MainActivity_hello( JNIEnv* env,
@@ -45,8 +44,7 @@ Java_com_flueky_demo_MainActivity_hello( JNIEnv* env,
     #define ABI "unknown"
 #endif
 
-#define M
-    LOGD("zkf heheda");
+    LOGD("日志输出示例");
 
     return (*env)->NewStringUTF(env, "Hello from JNI !  Compiled with ABI " ABI ".");
 }

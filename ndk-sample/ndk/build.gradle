@@ -4,10 +4,11 @@ android {
     compileSdkVersion 28
     externalNativeBuild {
         ndkBuild {
+            // 指定mk文件路径
             path 'src/main/jni/Android.mk'
         }
     }
-    defaultConfig{
+    defaultConfig {
         ndk {
 //            abiFilter 'armeabi-v7a'
         }

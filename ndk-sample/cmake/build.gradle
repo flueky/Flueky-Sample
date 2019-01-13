@@ -6,13 +6,17 @@ android {
     defaultConfig{
         externalNativeBuild {
             cmake {
+                // 指定配置参数，更多参数设置见 https://developer.android.google.cn/ndk/guides/cmake
                 arguments "-DCMAKE_BUILD_TYPE=DEBUG"
+                // 添加CPP标准
+//                cppFlags "-std=c++11"
             }
         }
     }
 
     externalNativeBuild {
         cmake {
+            // 指定CMake编译配置文件路径
             path "src/main/cpp/CMakeLists.txt"
         }
     }

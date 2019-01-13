@@ -8,6 +8,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
     static {
+        // 加载 JNI 库
         System.loadLibrary("hello-jni");
     }
 
@@ -22,5 +23,6 @@ public class MainActivity extends Activity {
         Toast.makeText(this,"zkf",Toast.LENGTH_SHORT).show();
     }
 
+    // 声明 Native 方法
     private native String hello();
 }
