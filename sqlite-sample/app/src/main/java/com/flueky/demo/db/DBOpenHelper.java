@@ -28,12 +28,11 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        String CREATE_SQL = "create table user( id INTEGER primary key autoincrement,name text,age INTEGER)";
+        db.execSQL(CREATE_SQL);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String CREATE_SQL = "create table user( id int primary key,name text,age int)";
-        db.execSQL(CREATE_SQL);
     }
 }
