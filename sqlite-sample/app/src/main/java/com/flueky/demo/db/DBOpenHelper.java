@@ -6,11 +6,13 @@ import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
+import android.util.Log;
 
 /**
  * 管理数据库创建和版本
  */
 public class DBOpenHelper extends SQLiteOpenHelper {
+    private static final String TAG = "flueky";
 
     // 相当于 SQLiteDatabase openDatabase(String, CursorFactory)
     public DBOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -33,6 +35,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_SQL = "create table user( id INTEGER primary key autoincrement,name text,age INTEGER)";
+        Log.d(TAG, "create sql : " + CREATE_SQL);
         db.execSQL(CREATE_SQL);
     }
 
