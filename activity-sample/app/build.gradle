@@ -1,0 +1,12 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.flueky.demo"
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'libs')
+}
