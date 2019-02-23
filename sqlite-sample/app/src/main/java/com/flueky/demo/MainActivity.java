@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
         }
 
         SQLiteOpenHelper dbHelper;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O_MR1) {
+        if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.O_MR1) {
             SQLiteDatabase.OpenParams openParams = new SQLiteDatabase.OpenParams.Builder()
                     .setCursorFactory(factory)
                     .setErrorHandler(errorHandler)
