@@ -7,3 +7,7 @@
 ## sqlite-sample
 
 演示了数据库的基本操作：增、删、改、查。
+
+## activity-sample
+
+演示了 Activity 的生命周期、跳转动画、启动模式。
