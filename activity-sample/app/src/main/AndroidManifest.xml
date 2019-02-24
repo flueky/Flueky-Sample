@@ -7,15 +7,24 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:launchMode="standard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".SecondActivity"/>
+        <activity
+            android:name=".SecondActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ThirdActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".FourthActivity"
+            android:launchMode="singleInstance" />
     </application>
 
 </manifest>

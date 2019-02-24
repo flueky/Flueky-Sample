@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#665566ee"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="jump"
-        android:tag="single"
-        android:text="startActivity" />
+        android:onClick="back"
+        android:text="finish" />
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="jump"
-        android:tag="multi"
-        android:text="startActivities 2 3" />
+        android:tag="second"
+        android:text="To Second" />
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:onClick="jump"
-        android:tag="multi2"
-        android:text="startActivities 3 2" />
+        android:tag="third"
+        android:text="To Third" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:onClick="jump"
-        android:tag="result"
-        android:text="startActivityForResult" />
-
-
+        android:tag="fourth"
+        android:text="To Fourth" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="第一个页面" />
+        android:text="第三个页面" />
 
     <TextView
-        android:id="@+id/tv_task_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_task_id" />
 </RelativeLayout>

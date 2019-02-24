@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="second"
+        android:onClick="jump"
+        android:text="To Second" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:tag="third"
+        android:onClick="jump"
+        android:text="To Third" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="jump"
+        android:tag="fourth"
+        android:text="To fourth" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="第二个页面" />
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_task_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"/>
+</RelativeLayout>
