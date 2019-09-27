@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flueky.app">
+
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.flueky.demo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.flueky.demo.DemoReceiver"
+            android:permission="com.flueky.demo.permission.Demo_Receiver">
+            <intent-filter android:priority="1000">
+                <action android:name="com.flueky.app.Demo_Receiver" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+    <uses-permission android:name="com.flueky.demo.permission.Demo_Receiver" />
+
+</manifest>
