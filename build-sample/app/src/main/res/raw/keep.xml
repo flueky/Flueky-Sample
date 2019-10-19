@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:shrinkMode="strict"
+/>
+<!-- shrinkMode strict 表示严格模式 ，删除所有在代码里动态指定的资源 -->
+<!-- shrinkMode safe 表示安全模式 ，保留代码中引用的可能需要的资源 -->
+<!--    tools:discard="@layout/unused2" 定义不需要保留的文件-->
+<!--    tools:keep="@layout/l_used*_c,@layout/l_used_a,@layout/l_used_b*" 定义需要保留的文件-->

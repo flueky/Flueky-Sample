@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<manifest xmlns:tools="http://schemas.android.com/tools">
+    <!-- minSdkVersion 存在冲突的解决方案-->
+    <uses-sdk tools:overrideLibrary="com.flueky.library" />
+</manifest>
