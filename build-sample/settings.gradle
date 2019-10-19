@@ -1,6 +1,0 @@
-include ':app'
-include ':library'
-
-// 添加外部库
-include 'other-lib'
-project(':other-lib').projectDir = new File(rootDir, "../other-sample/library")

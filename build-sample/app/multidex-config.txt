@@ -1,2 +1,0 @@
-    //com/example/MyClass.class
-    //com/example/MyOtherClass.class
