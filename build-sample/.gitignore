@@ -6,4 +6,5 @@ gradlew.bat
 local.properties
 build
 *.iml
+output
 .externalNativeBuild
