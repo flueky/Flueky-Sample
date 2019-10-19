@@ -1,0 +1,49 @@
+// 加载其他的 gradle 配置文件，可选
+apply from: "config.gradle"
+
+buildscript {
+    repositories {
+        //  仓库地址
+        google()
+        jcenter()
+        mavenCentral()
+    }
+//    工程的依赖配置
+    dependencies {
+        // 必须包含的 gradle 版本的构建工具。
+        classpath 'com.android.tools.build:gradle:3.4.1'
+    }
+}
+
+// 全部工程配置，作用于每个 Module
+allprojects {
+    repositories {
+        //  仓库地址
+        google()
+        jcenter()
+        mavenCentral()
+
+        // 依赖仓库，添加用于查找依赖项的目录，可以多个。
+        flatDir {
+            // jar、aar 存放的目录
+            dirs 'libs'
+        }
+    }
+}
+
+// 扩展变量，用于统一管理每个 Module 的有关配置
+ext {
+    // 应用 id
+    applicationId = "com.flueky.demo"
+    // 统一控制各个 Module 使用的 SDK 版本
+    compileSdkVersion = 29
+    buildToolsVersion = "29.0.0"
+    minSdkVersion = 19
+    targetSdkVersion = 29
+
+    // 定义 Module 的版本号
+    app = [
+            versionCode: 1,
+            versionName: '1.0.0'
+    ]
+}

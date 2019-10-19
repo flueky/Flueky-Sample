@@ -11,3 +11,15 @@
 ## [sqlite-sample](sqlite-sample)
 
 演示了数据库的基本操作：增、删、改、查。
+
+## [broadcast-sample](broadcast-sample)
+
+演示了 广播的注册、发送、接收 。包括全局广播、有序广播、本地广播。
+
+## [build-sample](build-sample)
+
+演示了使用 gradle 构建 Android 工程。
+
+## [other-sample](other-sample)
+
+配合 [build-sample](build-sample) 使用。
