@@ -27,3 +27,7 @@
 ## [maven-sample](maven-sample)
 
 演示使用 Maven 导出到仓库，并添加依赖。
+
+## [zjtd-sample](zjtd-sample)
+
+今日头条适配方案。
