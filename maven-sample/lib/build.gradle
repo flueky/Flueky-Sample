@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+// 远程库名称通常由三部分构成 ，groupId:artifactId:version
+// 定义 group
+group = 'com.flueky'
+// 定义 version
+version = '1.0.0' // 指定版本
+// artifactId 默认使用 module name
+
+// 以上两个配置也可以在下面的 deployer 中定义
+
+// 下面定义三种不同的 maven 仓库地址
+// 1. 计算机中，用户目录下
+def localMavenRepo = 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+// 2. 工程目录下
+def projectMavenRepo = 'file://' + rootDir.getAbsolutePath() + '/repository' // 等同 uri('../repository')
+// 3. 自建的 Maven 私服上
+def nexusMavenRepo = 'http://127.0.0.1:9000/repository/android/'
+// 下面是 Maven 私服的用户名和密码，上传时需要
+def nexusUserName = 'admin'
+def nexusPassword = 'admin123'
+
+uploadArchives {
+    repositories.mavenDeployer {
+        // 指定导出到的仓库地址，三个任选一个
+        repository(url: localMavenRepo)
+        repository(url: projectMavenRepo)
+        repository(url: nexusMavenRepo) {
+            // 需要授权用户名和密码
+            authentication(userName: nexusUserName, password: nexusPassword)
+        }
+//        // 下面三个定义的常量可以复写上面已定义的值
+//        pom.groupId = "com.flueky"// 唯一标识（通常为模块包名，也可以任意）
+//        pom.artifactId = "maven-test" // 项目名称（通常为类库模块名称，也可以任意）
+//        pom.version = "1.0.0" // 版本号
+    }
+}
