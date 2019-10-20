@@ -23,3 +23,7 @@
 ## [other-sample](other-sample)
 
 配合 [build-sample](build-sample) 使用。
+
+## [maven-sample](maven-sample)
+
+演示使用 Maven 导出到仓库，并添加依赖。
