@@ -12,7 +12,7 @@ android {
         minSdkVersion 3
         // 目标 sdk 版本，低于此 Android 版本的手机完美兼容，高于此 Android 版本的手机，部分特性不能使用
         // 升级 target 需要针对高版本做兼容。
-        targetSdkVersion 4
+        targetSdkVersion 3
         // 应用版本号，覆盖安装时，升级版本依据
         versionCode 1
         // 版本名称，

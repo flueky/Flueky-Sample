@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.flueky.demo">
 
     <application>
         <activity android:name=".DevMinApi23DebugActivity" />
+        <activity
+            android:name=".MainActivity"
+            tools:node="replace">
+            <intent-filter tools:node="removeAll" />
+            <meta-data
+                android:name="test_index"
+                android:value="devMinApi23Debug" />
+        </activity>
     </application>
 
 </manifest>

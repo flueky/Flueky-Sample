@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.flueky.demo">
 
-<application>
-    <activity android:name=".DevActivity"/>
-</application>
+    <application tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".DevActivity" />
+        <activity
+            android:name=".MainActivity"
+            tools:node="replace">
+            <intent-filter tools:node="removeAll" />
+            <meta-data
+                android:name="test_index"
+                android:value="dev" />
+        </activity>
+    </application>
 
 </manifest>

@@ -3,17 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.flueky.demo">
 
-    <application>
-        <activity android:name=".DebugActivity" />
+    <application tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MinApi23Activity" />
         <activity
             android:name=".MainActivity"
             tools:node="replace">
             <intent-filter tools:node="removeAll" />
             <meta-data
                 android:name="test_index"
-                android:value="debug" />
+                android:value="devMinApi23" />
         </activity>
     </application>
-
 
 </manifest>
