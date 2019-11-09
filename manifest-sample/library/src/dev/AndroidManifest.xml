@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.flueky.library">
+
+    <application>
+        <activity android:name=".DevActivity" />
+
+<!--        <activity-->
+<!--            android:name="com.flueky.lib.TestActivity"-->
+<!--            android:exported="false"-->
+<!--            android:screenOrientation="portrait">-->
+<!--            <meta-data-->
+<!--                android:name="dev_index"-->
+<!--                android:value="dev" />-->
+<!--        </activity>-->
+    </application>
+
+</manifest>

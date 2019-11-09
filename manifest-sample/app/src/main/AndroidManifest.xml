@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.flueky.demo">
 
+    <uses-sdk tools:overrideLibrary="com.flueky.library" />
 
     <application
         android:label="@string/app_name"
@@ -16,6 +18,19 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.flueky.lib.TestActivity"
+            android:windowSoftInputMode="adjustPan">
+            <!--            <meta-data-->
+            <!--                android:name="debug_index"-->
+            <!--                tools:node="remove" />-->
+            <!--            <meta-data tools:node="removeAll" />-->
+
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <category android:name="android.intent.category.DEFAULT" />-->
+            <!--            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>

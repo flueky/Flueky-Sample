@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.flueky.library">
 
+
     <application>
-        <activity android:name="com.flueky.lib.TestActivity"></activity>
+        <activity
+            android:name="com.flueky.lib.TestActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

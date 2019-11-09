@@ -9,14 +9,34 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         // 最小 sdk 版本，低于此 Android 版本的手机不能安装
-        minSdkVersion 3
+        minSdkVersion 29
         // 目标 sdk 版本，低于此 Android 版本的手机完美兼容，高于此 Android 版本的手机，部分特性不能使用
         // 升级 target 需要针对高版本做兼容。
-        targetSdkVersion 3
+        targetSdkVersion 29
         // 应用版本号，覆盖安装时，升级版本依据
         versionCode 1
         // 版本名称，
         versionName '1.0.0'
+    }
+
+    buildTypes {
+        debug {
+        }
+        release {
+        }
+    }
+
+    flavorDimensions 'stage'
+
+    productFlavors {
+        // 开发阶段
+        dev {
+            dimension 'stage'
+        }
+        // 生产阶段
+        pro {
+            dimension 'stage'
+        }
     }
 
 }

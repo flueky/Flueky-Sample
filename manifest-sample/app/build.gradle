@@ -22,7 +22,7 @@ android {
         // 版本名称，
         versionName rootProject.ext.app.versionName
         // 库 module 没有开发进度的维度，因此忽略
-        missingDimensionStrategy 'dev', 'pro'
+//        missingDimensionStrategy 'dev', 'pro'
         missingDimensionStrategy 'minApi21', 'minApi23','minApi26'
 
 //        javaCompileOptions {
