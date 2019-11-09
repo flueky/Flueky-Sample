@@ -1,5 +1,5 @@
 include ':app'
-include ':lib'
+include ':library'
 
 //// 添加外部库
 //include 'other-lib'

@@ -11,7 +11,7 @@ buildscript {
 //    工程的依赖配置
     dependencies {
         // 必须包含的 gradle 版本的构建工具。
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:3.5.0'
     }
 }
 
@@ -19,16 +19,16 @@ buildscript {
 allprojects {
     repositories {
 
-        // 本地仓库
-        mavenLocal()
-        // 本地服务器
-        maven {
-            credentials {
-                username "flueky"
-                password "123456"
-            }
-            url 'http://127.0.0.1:9000/repository/android/'
-        }
+//        // 本地仓库
+//        mavenLocal()
+//        // 本地服务器
+//        maven {
+//            credentials {
+//                username "flueky"
+//                password "123456"
+//            }
+//            url 'http://127.0.0.1:9000/repository/android/'
+//        }
         // 工程目录仓库
         maven { url 'file://' + rootDir.getAbsolutePath() + '/repository/' }
 

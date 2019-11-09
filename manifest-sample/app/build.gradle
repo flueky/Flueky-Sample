@@ -22,8 +22,8 @@ android {
         // 版本名称，
         versionName rootProject.ext.app.versionName
         // 库 module 没有开发进度的维度，因此忽略
-//        missingDimensionStrategy 'dev', 'pro'
-//        missingDimensionStrategy 'minApi21', 'minApi23','minApi26'
+        missingDimensionStrategy 'dev', 'pro'
+        missingDimensionStrategy 'minApi21', 'minApi23','minApi26'
 
 //        javaCompileOptions {
 //            annotationProcessorOptions {
@@ -95,36 +95,36 @@ android {
 //        }
     }
 
-//    flavorDimensions 'stage', 'api'
-//
-//    productFlavors {
-//        // 开发阶段
-//        dev {
-//            dimension 'stage'
-//        }
-//        // 生产阶段
-//        pro {
-//            dimension 'stage'
-//        }
-//
-//        minApi21 {
-//            dimension 'api'
-//            minSdkVersion 21
-//            // 库 module 没有 minApi21 ，匹配较高版本
-//            // 同时需要在 AndroidManifest.xml 中使用 overrideLibrary
-//            matchingFallbacks = ['minApi23']
-//        }
-//        minApi23 {
-//            dimension 'api'
-//            minSdkVersion 23
-//        }
-//        minApi26 {
-//            dimension 'api'
-//            minSdkVersion 26
-//            // 库 module 没有 minApi26 ，匹配较低版本，可兼容
-//            matchingFallbacks = ['minApi23']
-//        }
-//    }
+    flavorDimensions 'stage', 'api'
+
+    productFlavors {
+        // 开发阶段
+        dev {
+            dimension 'stage'
+        }
+        // 生产阶段
+        pro {
+            dimension 'stage'
+        }
+
+        minApi21 {
+            dimension 'api'
+            minSdkVersion 21
+            // 库 module 没有 minApi21 ，匹配较高版本
+            // 同时需要在 AndroidManifest.xml 中使用 overrideLibrary
+            matchingFallbacks = ['minApi23']
+        }
+        minApi23 {
+            dimension 'api'
+            minSdkVersion 23
+        }
+        minApi26 {
+            dimension 'api'
+            minSdkVersion 26
+            // 库 module 没有 minApi26 ，匹配较低版本，可兼容
+            matchingFallbacks = ['minApi23']
+        }
+    }
 //
 //    //  设置不需要生成 apk 的类型和特性
 //    variantFilter { variant ->
@@ -235,7 +235,7 @@ dependencies {
 //    // 如果 需要组合使用，如 devMinApi21DebugImplementation，见 configurations
 //
 //    // 依赖本地 module
-//    implementation project(':library')
+    implementation project(':library')
 //    implementation project(':other-lib')
 //    // 等同于带 path 参数
 ////    implementation project(path: ':library')
