@@ -1,21 +1,47 @@
 buildscript {
-    repositories{
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {url 'https://maven.google.com'}
+//        //  仓库地址
+//        google()
         jcenter()
-        google()
         mavenCentral()
     }
-    dependencies{
-        classpath 'com.android.tools.build:gradle:3.2.1'
+//    工程的依赖配置
+    dependencies {
+        // 必须包含的 gradle 版本的构建工具。
+        classpath "com.android.tools.build:gradle:4.1.0"
+//        classpath "com.mob.sdk:MobSDK:2018.0319.1724"
     }
 }
 
-allprojects{
-    repositories{
-        jcenter()
-        google()
+// 全部工程配置，作用于每个 Module
+allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {url 'https://maven.google.com'}
+//        //  仓库地址
+//        google()
+        // 本地仓库
+        mavenLocal()
+//        // 本地服务器
+//        maven {
+//            credentials {
+//                username "flueky"
+//                password "123456"
+//            }
+//            url 'http://127.0.0.1:9000/repository/android/'
+//        }
+        // 工程目录仓库
+        maven { url 'file://' + rootDir.getAbsolutePath() + '/repository/' }
 
-        flatDir {
-            dirs 'libs'
-        }
+        jcenter()
+        mavenCentral()
+
+//        // 依赖仓库，添加用于查找依赖项的目录，可以多个。
+//        flatDir {
+//            // jar、aar 存放的目录
+//            dirs 'libs'
+//        }
     }
 }

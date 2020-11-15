@@ -1,11 +1,14 @@
 apply plugin: 'com.android.application'
+
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     defaultConfig {
         applicationId "com.flueky.ndk_sample"
+        versionCode 1
+        versionName '0.0.1'
+        targetSdkVersion 30
     }
 }
-
 
 dependencies {
     implementation fileTree(include: '*.jar', dir: 'libs')

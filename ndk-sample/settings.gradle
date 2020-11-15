@@ -1,7 +1,8 @@
+rootProject.name = 'NDK-Sample'
+
 include ':app'
 
 include 'ndk-cmake'
 project(':ndk-cmake').projectDir = new File(settingsDir, "cmake")
-
 include 'ndk-build'
 project(':ndk-build').projectDir = new File(settingsDir, "ndk")
